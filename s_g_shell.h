@@ -1,5 +1,5 @@
-#ifndef SHELL_H
-#define SHELL_H
+#ifndef S_G_SHELL_H
+#define S_G_SHELL_H
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -12,18 +12,18 @@
 
 extern char **environ;
 
-int built(char *cmadi);
+int inbuilts(char *cmd);
 
-void strvrs(char *strngi, int lin);
+void str_rvrs(char *strng, int ln);
 
-char *_itoa(int y);
+char *_itoa(int z);
 
-void erprt(char *nomi, char *commdi, int index);
+void errprt(char *nom, char *commd, int indx);
 
-void arrey_flid(char **arpt);
+void array_freed(char **ptrarr);
 
-int exct(char **cmdi, char **av, int index);
-char *cmd_rid(void);
+int s_g_exec(char **cmd, char **av, int indx);
+char *cmd_rd(void);
 char **tknze(char *ln);
 char*sduplic(const char *strng);
 char *scopy(char *destin, char *source);
@@ -34,11 +34,10 @@ int plus_num(char *strng);
 int _atoi(char *strng);
 char *_envrnget(char *varnm);
 char *_pget(char *commd);
-void built_dl(char **cmadi, char **av , int *status, int index);
-void envrn_prt(char **cmadi, int *status);
-void ext_fuc(char **cmadi, char **av, int *status, int index);
+void builtn_hdl(char **cmd, char **av , int *sttus, int indx);
+void environ_prt(char **cmd, int *sttus);
+void exit_func(char **cmd, char **av, int *sttus, int indx);
 
 
 
 #endif
-
